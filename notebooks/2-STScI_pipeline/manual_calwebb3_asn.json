@@ -1,0 +1,37 @@
+{
+    "asn_type": "spec3",
+    "asn_rule": "candidate_Asn_Lv2NRSMSA",
+    "version_id": "20221228t095826",
+    "code_version": "1.8.2",
+    "degraded_status": "No known degraded exposures in association.",
+    "program": "02565",
+    "constraints": "DMSAttrConstraint({'name': 'program', 'sources': ['program'], 'value': '2565'})\nDMSAttrConstraint({'name': 'is_tso', 'sources': ['tsovisit'], 'value': None})\nDMSAttrConstraint({'name': 'instrument', 'sources': ['instrume'], 'value': 'nirspec'})\nDMSAttrConstraint({'name': 'detector', 'sources': ['detector'], 'value': 'nrs2'})\nDMSAttrConstraint({'name': 'opt_elem', 'sources': ['filter'], 'value': 'clear'})\nDMSAttrConstraint({'name': 'opt_elem2', 'sources': ['grating'], 'value': 'prism'})\nDMSAttrConstraint({'name': 'opt_elem3', 'sources': ['fxd_slit'], 'value': None})\nDMSAttrConstraint({'name': 'subarray', 'sources': ['subarray'], 'value': 'full'})\nDMSAttrConstraint({'name': 'channel', 'sources': ['channel'], 'value': None})\nDMSAttrConstraint({'name': 'slit', 'sources': ['fxd_slit'], 'value': None})\nDMSAttrConstraint({'name': 'exp_type', 'sources': ['exp_type'], 'value': 'nrs_msaspec'})\nDMSAttrConstraint({'name': 'expspcin', 'sources': ['expspcin'], 'value': '1'})\nDMSAttrConstraint({'name': 'asn_candidate', 'sources': ['asn_candidate'], 'value': \"\\\\('o007',\\\\ 'observation'\\\\)\"})",
+    "asn_id": "o007",
+    "asn_pool": "jw02565_20221228t095826_pool.csv",
+    "target": "35",
+    "products": [
+        {
+            "name": "jw02565-o007_{source_id}_nirspec_clear-prism",
+            "members": [
+                {
+                    "expname": "jw02565007001_03101_00004_nrs2_cal.fits",
+                    "exptype": "science",
+                    "exposerr": "null",
+                    "asn_candidate": "('o007', 'observation')"
+                },
+                {
+                    "expname": "jw02565007001_03101_00003_nrs2_cal.fits",
+                    "exptype": "science",
+                    "exposerr": "null",
+                    "asn_candidate": "('o007', 'observation')"
+                },
+                {
+                    "expname": "jw02565007001_03101_00002_nrs2_cal.fits",
+                    "exptype": "science",
+                    "exposerr": "null",
+                    "asn_candidate": "('o007', 'observation')"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,271 @@
+#ASDF 1.0.0
+#ASDF_STANDARD 1.5.0
+%YAML 1.1
+%TAG ! tag:stsci.edu:asdf/
+--- !core/asdf-1.1.0
+asdf_library: !core/software-1.0.0 {author: The ASDF Developers, homepage: 'http://github.com/asdf-format/asdf',
+  name: asdf, version: 3.2.0}
+history:
+  extensions:
+  - !core/extension_metadata-1.0.0
+    extension_class: asdf.extension._manifest.ManifestExtension
+    extension_uri: asdf://asdf-format.org/core/extensions/core-1.5.0
+    software: !core/software-1.0.0 {name: asdf, version: 3.2.0}
+class: jwst.pipeline.calwebb_spec3.Spec3Pipeline
+name: Spec3Pipeline
+parameters:
+  input_dir: '.'
+  output_dir: '.'
+  output_ext: .fits
+  output_file: null
+  output_use_index: true
+  output_use_model: false
+  post_hooks: []
+  pre_hooks: []
+  save_results: true
+  search_output_file: true
+  skip: false
+  suffix: null
+steps:
+- class: jwst.assign_mtwcs.assign_mtwcs_step.AssignMTWcsStep
+  name: assign_mtwcs
+  parameters:
+    input_dir: ''
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: true
+    post_hooks: []
+    pre_hooks: []
+    save_results: false
+    search_output_file: true
+    skip: false
+    suffix: assign_mtwcs
+- class: jwst.master_background.master_background_step.MasterBackgroundStep
+  name: master_background
+  parameters:
+    force_subtract: false
+    input_dir: ''
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: true
+    post_hooks: []
+    pre_hooks: []
+    save_background: false
+    save_results: false
+    search_output_file: true
+    skip: false
+    suffix: null
+    user_background: null
+- class: jwst.mrs_imatch.mrs_imatch_step.MRSIMatchStep
+  name: mrs_imatch
+  parameters:
+    bkg_degree: 1
+    input_dir: ''
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: false
+    post_hooks: []
+    pre_hooks: []
+    save_results: false
+    search_output_file: true
+    skip: false
+    subtract: false
+    suffix: null
+- class: jwst.outlier_detection.outlier_detection_step.OutlierDetectionStep
+  name: outlier_detection
+  parameters:
+    allowed_memory: null
+    backg: 0.0
+    fillval: INDEF
+    good_bits: ~DO_NOT_USE
+    ifu_second_check: false
+    in_memory: false
+    input_dir: ''
+    kernel: square
+    kernel_size: 7 7
+    maskpt: 0.7
+    nhigh: 0
+    nlow: 0
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: false
+    pixfrac: 1.0
+    post_hooks: []
+    pre_hooks: []
+    resample_data: true
+    save_intermediate_results: false
+    save_results: false
+    scale: 1.2 0.7
+    scale_detection: false
+    search_output_file: false
+    skip: true
+    snr: 5.0 4.0
+    suffix: null
+    threshold_percent: 99.8
+    weight_type: ivm
+- class: jwst.resample.resample_spec_step.ResampleSpecStep
+  name: resample_spec
+  parameters:
+    allowed_memory: null
+    blendheaders: true
+    crpix: null
+    crval: null
+    fillval: INDEF
+    in_memory: true
+    input_dir: ''
+    kernel: square
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_shape: null
+    output_use_index: true
+    output_use_model: false
+    output_wcs: ''
+    pixel_scale: null
+    pixel_scale_ratio: 1.0
+    pixfrac: 1.0
+    post_hooks: []
+    pre_hooks: []
+    rotation: null
+    save_results: false
+    search_output_file: true
+    single: false
+    skip: false
+    suffix: null
+    weight_type: ivm
+- class: jwst.cube_build.cube_build_step.CubeBuildStep
+  name: cube_build
+  parameters:
+    band: all
+    channel: all
+    coord_system: skyalign
+    cube_pa: null
+    debug_spaxel: -1 -1 -1
+    dec_center: null
+    filter: all
+    grating: all
+    input_dir: ''
+    nspax_x: null
+    nspax_y: null
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_type: null
+    output_use_index: true
+    output_use_model: true
+    post_hooks: []
+    pre_hooks: []
+    ra_center: null
+    rois: 0.0
+    roiw: 0.0
+    save_results: false
+    scalew: 0.0
+    scalexy: 0.0
+    search_output_file: false
+    single: false
+    skip: false
+    skip_dqflagging: false
+    suffix: s3d
+    wavemax: null
+    wavemin: null
+    weight_power: 2.0
+    weighting: drizzle
+- class: jwst.extract_1d.extract_1d_step.Extract1dStep
+  name: extract_1d
+  parameters:
+    apply_apcorr: true
+    bkg_fit: null
+    bkg_order: null
+    bkg_sigma_clip: 3.0
+    center_xy: null
+    ifu_autocen: false
+    ifu_rfcorr: false
+    ifu_rscale: null
+    ifu_set_srctype: null
+    input_dir: ''
+    log_increment: 50
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: false
+    post_hooks: []
+    pre_hooks: []
+    save_results: false
+    search_output_file: true
+    skip: true
+    smoothing_length: null
+    soss_atoca: true
+    soss_bad_pix: masking
+    soss_estimate: null
+    soss_max_grid_size: 20000
+    soss_modelname: null
+    soss_n_os: 2
+    soss_rtol: 0.0001
+    soss_threshold: 0.01
+    soss_tikfac: null
+    soss_transform: null
+    soss_wave_grid_in: null
+    soss_wave_grid_out: null
+    soss_width: 40.0
+    subtract_background: null
+    suffix: null
+    use_source_posn: null
+- class: jwst.photom.photom_step.PhotomStep
+  name: photom
+  parameters:
+    input_dir: ''
+    inverse: false
+    mrs_time_correction: true
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: false
+    post_hooks: []
+    pre_hooks: []
+    save_results: false
+    search_output_file: true
+    skip: false
+    source_type: null
+    suffix: null
+- class: jwst.combine_1d.combine_1d_step.Combine1dStep
+  name: combine_1d
+  parameters:
+    exptime_key: exposure_time
+    input_dir: ''
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: false
+    post_hooks: []
+    pre_hooks: []
+    save_results: false
+    search_output_file: true
+    skip: false
+    suffix: null
+- class: jwst.spectral_leak.spectral_leak_step.SpectralLeakStep
+  name: spectral_leak
+  parameters:
+    input_dir: ''
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: false
+    post_hooks: []
+    pre_hooks: []
+    save_results: false
+    search_output_file: true
+    skip: false
+    suffix: null
+...
