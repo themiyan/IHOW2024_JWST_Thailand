@@ -4,17 +4,18 @@
 %TAG ! tag:stsci.edu:asdf/
 --- !core/asdf-1.1.0
 asdf_library: !core/software-1.0.0 {author: The ASDF Developers, homepage: 'http://github.com/asdf-format/asdf',
-  name: asdf, version: 2.15.1}
+  name: asdf, version: 3.2.0}
 history:
   extensions:
   - !core/extension_metadata-1.0.0
-    extension_class: asdf.extension.BuiltinExtension
-    software: !core/software-1.0.0 {name: asdf, version: 2.15.1}
+    extension_class: asdf.extension._manifest.ManifestExtension
+    extension_uri: asdf://asdf-format.org/core/extensions/core-1.5.0
+    software: !core/software-1.0.0 {name: asdf, version: 3.2.0}
 class: jwst.pipeline.calwebb_detector1.Detector1Pipeline
 name: Detector1Pipeline
 parameters:
-  input_dir: ''
-  output_dir: ''
+  input_dir: '.'
+  output_dir: '.'
   output_ext: .fits
   output_file: null
   output_use_index: true
@@ -57,6 +58,27 @@ steps:
     search_output_file: true
     skip: false
     suffix: null
+- class: jwst.emicorr.emicorr_step.EmiCorrStep
+  name: emicorr
+  parameters:
+    input_dir: ''
+    nbins: null
+    nints_to_phase: null
+    onthefly_corr_freq: null
+    output_dir: null
+    output_ext: .fits
+    output_file: null
+    output_use_index: true
+    output_use_model: false
+    post_hooks: []
+    pre_hooks: []
+    save_intermediate_results: false
+    save_results: false
+    scale_reference: true
+    search_output_file: true
+    skip: true
+    suffix: null
+    user_supplied_reffile: null
 - class: jwst.saturation.saturation_step.SaturationStep
   name: saturation
   parameters:
@@ -107,6 +129,7 @@ steps:
   name: refpix
   parameters:
     input_dir: ''
+    irs2_mean_subtraction: false
     odd_even_columns: true
     odd_even_rows: true
     output_dir: null
@@ -117,6 +140,7 @@ steps:
     ovr_corr_mitigation_ftr: 3.0
     post_hooks: []
     pre_hooks: []
+    preserve_irs2_refpix: false
     save_results: false
     search_output_file: true
     side_gain: 1.0
@@ -188,6 +212,7 @@ steps:
 - class: jwst.dark_current.dark_current_step.DarkCurrentStep
   name: dark_current
   parameters:
+    average_dark_current: null
     dark_output: null
     input_dir: ''
     output_dir: null
@@ -270,9 +295,11 @@ steps:
     flag_4_neighbors: true
     four_group_rejection_threshold: 5.0
     input_dir: ''
+    mask_snowball_core_next_int: true
     max_extended_radius: 200
     max_jump_to_flag_neighbors: 1000.0
     maximum_cores: 'all'
+    min_diffs_single_pass: 10
     min_jump_area: 5.0
     min_jump_to_flag_neighbors: 10.0
     min_sat_area: 1.0
@@ -293,6 +320,7 @@ steps:
     save_results: false
     search_output_file: true
     skip: false
+    snowball_time_masked_next_int: 4000
     suffix: null
     three_group_rejection_threshold: 6.0
     time_masked_after_shower: 15.0
