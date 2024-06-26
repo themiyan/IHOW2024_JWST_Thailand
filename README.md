@@ -15,12 +15,12 @@ Note you may have to follow instructions on installing ipykernel in your local e
 > conda activate nirspec_jdap\
 > conda install ipykernel --name nirspec_jdap\
 > python -m ipykernel install --user --name=nirspec_jdap\
-> pip install ipython jupyter\
+> pip install ipython jupyter
 
 Then regardless of what option selected above"
 > pip uninstall jwst\
 > pip install jwst\
-> pip install msaexp\
+> pip install msaexp
 
 Alternatively, you should install this in your own laptops. This is recomended because you will have access to it once you leave the workshop. Install conda and follow:
 
@@ -28,9 +28,9 @@ Alternatively, you should install this in your own laptops. This is recomended b
 > conda activate nirspec_jdap\
 > conda install ipykernel --name nirspec_jdap\
 > python -m ipykernel install --user --name=nirspec_jdap\
-> pip install ipython jupyter\ 
-> pip install jwst\ 
-> pip install msaexp\
+> pip install ipython jupyter\
+> pip install jwst\
+> pip install msaexp
 
 You will have to set the CRDS server and path configurations. In the notebooks, we do this within the code itself. 
 
