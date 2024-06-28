@@ -1,0 +1,222 @@
+# (2024-06-28 04:56:10.245)
+
+slit_combine.extract_spectra(**{'target': '4233_46811', 'root': 'rubies-egs61', 'path_to_files': './', 'files': None, 'do_gratings': ['PRISM', 'G395H', 'G395M', 'G235M', 'G140M'], 'join': [0, 3, 5], 'split_uncover': True, 'stuck_threshold': 0.3, 'pad_border': 2, 'sort_by_sn': False, 'position_key': 'y_index', 'mask_cross_dispersion': None, 'cross_dispersion_mask_type': 'trace', 'trace_from_yoffset': True, 'reference_exposure': 'auto', 'trace_niter': 4, 'offset_degree': 0, 'degree_kwargs': {}, 'recenter_all': False, 'nod_offset': None, 'initial_sigma': 7, 'fit_type': 1, 'initial_theta': None, 'fix_params': False, 'input_fix_sigma': None, 'fit_params_kwargs': None, 'diffs': False, 'undo_pathloss': True, 'undo_barshadow': 2, 'use_first_sky': False, 'drizzle_kws': {'step': 1, 'with_pathloss': True, 'wave_sample': 1.05, 'ny': 13, 'dkws': {'oversample': 16, 'pixfrac': 0.8}}, 'get_xobj': False, 'trace_with_xpos': False, 'trace_with_ypos': True, 'get_background': False, 'make_2d_plots': True, 'include_full_pixtab': ['PRISM'], 'plot_kws': {}, 'kwargs': {'estimate_sky_kwargs': {'mask_yslit': [[-4.5, 4.5]], 'min_bar': 0.95, 'df': 81, 'high_clip': 0.5, 'make_plot': True}, 'min_bar': 0.35, 'flag_profile_kwargs': {'require_multiple': True, 'make_plot': True, 'grow': 2, 'nfilt': -32}}})
+
+rubies-egs61   target: 4233_46811   Files: 3
+
+* Group jw04233006001_nrs1_142-prism   N=3
+==================================
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=3 plus=0
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=3 plus=0
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=4 plus=0
+ 0 jw04233006001_03101_00002_nrs1_phot.142.4233_46811.fits (25, 423)  3 flagged hot pixels
+ 1 jw04233006001_03101_00003_nrs1_phot.142.4233_46811.fits (25, 423)  3 flagged hot pixels
+ 2 jw04233006001_03101_00004_nrs1_phot.142.4233_46811.fits (25, 423)  4 flagged hot pixels
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+   ./jw04233006001_03101_00002_nrs1_phot.142.4233_46811.fits source_type=None  undo PATHLOSS_UN
+   ./jw04233006001_03101_00003_nrs1_phot.142.4233_46811.fits source_type=None  undo PATHLOSS_UN
+   ./jw04233006001_03101_00004_nrs1_phot.142.4233_46811.fits source_type=None  undo PATHLOSS_UN
+ Recomputed offsets slit     : force [ 0.00,  5.14, -5.14] pix offsets
+ apply_spline_bar_correction :  (mode='wave')
+!apply_bad_shutter_mask     : PRISM stuck bad shutters [-1]
+ get_global_sky              : jw04233006001_sky.csv to sky_arrays
+ get_normalization_correction: prism_slit_renormalize.yaml quadrant=4 xcen=101 ycen=157
+ flag_trace_outliers         : 10 pixels  / yslit = [-2, 2]
+ flag_percentile_outliers    : 0 pixels  / plevels [0.95, -4, -0.1] threshold=0.729 (dilate=True)
+ flag_percentile_outliers    : calculated 0.950000 0.995754 0.999894
+ estimate_sky                : 12 outliers > 7  / N=2372 sky pixels 
+ flag_trace_outliers         : 0 pixels  / yslit = [-2, 2]
+ flag_percentile_outliers    : 0 pixels  / plevels [0.95, -4, -0.1] threshold=0.742 (dilate=True)
+ flag_percentile_outliers    : calculated 0.950000 0.995754 0.999894
+ flag_from_profile           : 0 ( 0.0%) pixels
+ multiple mask               : 1 pixels in >= 2 exposures
+
+keys: ['jw04233006001_nrs1_142-prism']
+
+##### Group #1 / 1: jw04233006001_nrs1_142-prism ####
+
+   fit_all_traces, iter 0
+     139  sigma=7.00  [ 0.000]  2202.5
+     140  sigma=10.35  [ 0.049]  1949.3
+     Exposure group 2   dchi2 =    -253.2
+
+     141  sigma=10.35  [ 0.049]  2493.2
+     142  sigma=10.35  [ 0.049]  2493.2
+     Exposure group 1   dchi2 =       0.0
+
+     143  sigma=10.35  [ 0.049]  1917.8
+     144  sigma=10.35  [ 0.049]  1917.8
+     Exposure group 3   dchi2 =       0.0
+
+   fit_all_traces, iter 1
+      57  sigma=10.35  [ 0.049]  1949.3
+      58  sigma=10.35  [ 0.049]  1949.3
+     Exposure group 2   dchi2 =      -0.0*
+
+      59  sigma=10.35  [ 0.049]  2493.2
+      60  sigma=10.35  [ 0.049]  2493.2
+     Exposure group 1   dchi2 =       0.0
+
+      61  sigma=10.35  [ 0.049]  1917.8
+      62  sigma=10.35  [ 0.049]  1917.8
+     Exposure group 3   dchi2 =       0.0
+
+   fit_all_traces, iter 2
+      70  sigma=10.35  [ 0.049]  1949.3
+      71  sigma=10.35  [ 0.049]  1949.3
+     Exposure group 2   dchi2 =       0.0*
+
+      72  sigma=10.35  [ 0.049]  2493.2
+      73  sigma=10.35  [ 0.049]  2493.2
+     Exposure group 1   dchi2 =       0.0
+
+      74  sigma=10.35  [ 0.049]  1917.8
+      75  sigma=10.35  [ 0.049]  1917.8
+     Exposure group 3   dchi2 =       0.0
+
+   fit_all_traces, iter 3
+      65  sigma=10.35  [ 0.049]  1949.3
+      66  sigma=10.35  [ 0.049]  1949.3
+     Exposure group 2   dchi2 =       0.0*
+
+      67  sigma=10.35  [ 0.049]  2493.2
+      68  sigma=10.35  [ 0.049]  2493.2
+     Exposure group 1   dchi2 =       0.0
+
+      69  sigma=10.35  [ 0.049]  1917.8
+      70  sigma=10.35  [ 0.049]  1917.8
+     Exposure group 3   dchi2 =       0.0
+
+
+gratings: {'prism': ['jw04233006001_nrs1_142-prism']}
+slit_prf_fraction: mu = -0.07, sigma = 1.0 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.08, sigma = 1.0 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.09, sigma = 1.0 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+msaexp.drizzle.extract_from_hdul: Initial center =    0.00, sigma =   1.04
+msaexp.drizzle.extract_from_hdul: dchi2/dcenter = 4019.3
+msaexp.drizzle.extract_from_hdul: aperture extraction = (13, 1)
+msaexp.drizzle.extract_from_hdul:  Output center =    0.00, sigma =   1.04
+rubies-egs61_prism-clear_4233_46811.spec.fits
+rubies-egs61_prism-clear_4233_46811.pixtab.fits
+# (2024-06-28 04:56:19.476)
+
+slit_combine.extract_spectra(**{'target': '4233_46811', 'root': 'rubies-egs61', 'path_to_files': './', 'files': None, 'do_gratings': ['PRISM', 'G395H', 'G395M', 'G235M', 'G140M'], 'join': [0, 3, 5], 'split_uncover': True, 'stuck_threshold': 0.3, 'pad_border': 2, 'sort_by_sn': False, 'position_key': 'y_index', 'mask_cross_dispersion': None, 'cross_dispersion_mask_type': 'trace', 'trace_from_yoffset': True, 'reference_exposure': 'auto', 'trace_niter': 4, 'offset_degree': 0, 'degree_kwargs': {}, 'recenter_all': False, 'nod_offset': None, 'initial_sigma': 7, 'fit_type': 1, 'initial_theta': None, 'fix_params': False, 'input_fix_sigma': None, 'fit_params_kwargs': None, 'diffs': False, 'undo_pathloss': True, 'undo_barshadow': 2, 'use_first_sky': False, 'drizzle_kws': {'step': 1, 'with_pathloss': True, 'wave_sample': 1.05, 'ny': 13, 'dkws': {'oversample': 16, 'pixfrac': 0.8}}, 'get_xobj': False, 'trace_with_xpos': False, 'trace_with_ypos': True, 'get_background': False, 'make_2d_plots': True, 'include_full_pixtab': ['PRISM'], 'plot_kws': {}, 'kwargs': {'estimate_sky_kwargs': {'mask_yslit': [[-4.0, 7.5]], 'min_bar': 0.95, 'df': 51, 'high_clip': 0.5, 'make_plot': True}, 'min_bar': 0.35, 'flag_profile_kwargs': {'require_multiple': True, 'make_plot': True, 'grow': 2, 'nfilt': -32}}})
+
+rubies-egs61   target: 4233_46811   Files: 3
+
+* Group jw04233006001_nrs1_142-prism   N=3
+==================================
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=3 plus=0
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=3 plus=0
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=4 plus=0
+ 0 jw04233006001_03101_00002_nrs1_phot.142.4233_46811.fits (25, 423)  3 flagged hot pixels
+ 1 jw04233006001_03101_00003_nrs1_phot.142.4233_46811.fits (25, 423)  3 flagged hot pixels
+ 2 jw04233006001_03101_00004_nrs1_phot.142.4233_46811.fits (25, 423)  4 flagged hot pixels
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+   ./jw04233006001_03101_00002_nrs1_phot.142.4233_46811.fits source_type=None  undo PATHLOSS_UN
+   ./jw04233006001_03101_00003_nrs1_phot.142.4233_46811.fits source_type=None  undo PATHLOSS_UN
+   ./jw04233006001_03101_00004_nrs1_phot.142.4233_46811.fits source_type=None  undo PATHLOSS_UN
+ Recomputed offsets slit     : force [ 0.00,  5.14, -5.14] pix offsets
+ apply_spline_bar_correction :  (mode='wave')
+!apply_bad_shutter_mask     : PRISM stuck bad shutters [-1]
+ get_global_sky              : jw04233006001_sky.csv to sky_arrays
+ get_normalization_correction: prism_slit_renormalize.yaml quadrant=4 xcen=101 ycen=157
+ flag_trace_outliers         : 10 pixels  / yslit = [-2, 2]
+ flag_percentile_outliers    : 0 pixels  / plevels [0.95, -4, -0.1] threshold=0.729 (dilate=True)
+ flag_percentile_outliers    : calculated 0.950000 0.995754 0.999894
+ estimate_sky                : 11 outliers > 7  / N=1891 sky pixels 
+ flag_trace_outliers         : 2 pixels  / yslit = [-2, 2]
+ flag_percentile_outliers    : 0 pixels  / plevels [0.95, -4, -0.1] threshold=0.754 (dilate=True)
+ flag_percentile_outliers    : calculated 0.950000 0.995754 0.999894
+ flag_from_profile           : 3 ( 0.0%) pixels
+ multiple mask               : 1 pixels in >= 2 exposures
+
+keys: ['jw04233006001_nrs1_142-prism']
+
+##### Group #1 / 1: jw04233006001_nrs1_142-prism ####
+
+   fit_all_traces, iter 0
+     158  sigma=7.00  [ 0.000]  2282.3
+     159  sigma=10.88  [ 0.039]  1944.9
+     Exposure group 2   dchi2 =    -337.3
+
+     160  sigma=10.88  [ 0.039]  2644.7
+     161  sigma=10.88  [ 0.039]  2644.7
+     Exposure group 1   dchi2 =       0.0
+
+     162  sigma=10.88  [ 0.039]  1821.0
+     163  sigma=10.88  [ 0.039]  1821.0
+     Exposure group 3   dchi2 =       0.0
+
+   fit_all_traces, iter 1
+      59  sigma=10.88  [ 0.039]  1944.9
+      60  sigma=10.88  [ 0.039]  1944.9
+     Exposure group 2   dchi2 =       0.0*
+
+      61  sigma=10.88  [ 0.039]  2644.7
+      62  sigma=10.88  [ 0.039]  2644.7
+     Exposure group 1   dchi2 =       0.0
+
+      63  sigma=10.88  [ 0.039]  1821.0
+      64  sigma=10.88  [ 0.039]  1821.0
+     Exposure group 3   dchi2 =       0.0
+
+   fit_all_traces, iter 2
+      59  sigma=10.88  [ 0.039]  1944.9
+      60  sigma=10.88  [ 0.039]  1944.9
+     Exposure group 2   dchi2 =      -0.0*
+
+      61  sigma=10.88  [ 0.039]  2644.7
+      62  sigma=10.88  [ 0.039]  2644.7
+     Exposure group 1   dchi2 =       0.0
+
+      63  sigma=10.88  [ 0.039]  1821.0
+      64  sigma=10.88  [ 0.039]  1821.0
+     Exposure group 3   dchi2 =       0.0
+
+   fit_all_traces, iter 3
+      44  sigma=10.88  [ 0.039]  1944.9
+      45  sigma=10.88  [ 0.039]  1944.9
+     Exposure group 2   dchi2 =       0.0*
+
+      46  sigma=10.88  [ 0.039]  2644.7
+      47  sigma=10.88  [ 0.039]  2644.7
+     Exposure group 1   dchi2 =       0.0
+
+      48  sigma=10.88  [ 0.039]  1821.0
+      49  sigma=10.88  [ 0.039]  1821.0
+     Exposure group 3   dchi2 =       0.0
+
+
+gratings: {'prism': ['jw04233006001_nrs1_142-prism']}
+slit_prf_fraction: mu = -0.07, sigma = 1.1 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.08, sigma = 1.1 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.09, sigma = 1.1 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+msaexp.drizzle.extract_from_hdul: Initial center =    0.00, sigma =   1.09
+msaexp.drizzle.extract_from_hdul: dchi2/dcenter = 4175.4
+msaexp.drizzle.extract_from_hdul: aperture extraction = (13, 1)
+msaexp.drizzle.extract_from_hdul:  Output center =    0.00, sigma =   1.09
+rubies-egs61_prism-clear_4233_46811.spec.fits
+rubies-egs61_prism-clear_4233_46811.pixtab.fits

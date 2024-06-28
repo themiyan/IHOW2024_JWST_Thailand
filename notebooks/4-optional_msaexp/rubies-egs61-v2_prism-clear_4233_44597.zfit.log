@@ -1,0 +1,60 @@
+# (2024-06-28 03:59:31.436)
+
+spectrum.fit_redshift(**{'file': 'rubies-egs61-v2_prism-clear_4233_44597.spec.fits', 'z0': [1, 6], 'zstep': None, 'nspline': None, 'scale_disp': 1.3, 'vel_width': 100, 'Rline': None, 'is_prism': False, 'use_full_dispersion': False, 'ranges': None, 'sys_err': 0.02, 'kwargs': {'scale_uncertainty_kwargs': {}}, 'froot': 'rubies-egs61-v2_prism-clear_4233_44597'})
+
+calc_uncertainty_scale: Mask additional 1 pixels
+  0.20: -3.079420e+02
+  0.20: -3.079420e+02
+ -0.81: 2.468759e+02
+ -0.81: 2.468759e+02
+  0.15: -3.117755e+02
+  0.15: -3.117755e+02
+  0.12: -3.124743e+02
+  0.12: -3.124743e+02
+  0.12: -3.124797e+02
+  0.12: -3.124797e+02
+  0.12: -3.124797e+02
+  0.12: -3.124797e+02
+  0.12: -3.124797e+02
+  0.12: -3.124797e+02
+calc_uncertainty_scale: sys_err = 0.0200
+calc_uncertainty_scale: coeffs = [0.11909925]
+calc_uncertainty_scale: NMAD = 0.991
+calc_uncertainty_scale: Set SCALE_UNCERTAINTY: [0.11909925]
+
+# line flux err
+# flux x 10^-20 erg/s/cm2
+# rubies-egs61-v2_prism-clear_4233_44597.spec.fits
+# z = 3.46038
+# Fri Jun 28 10:59:54 2024
+      line OIII-1663      -10.2 ±    174.5 (EW=     -0.7)
+      line NIII-1750      -66.6 ±    178.9 (EW=     -4.7)
+      line CIII-1906      140.4 ±    159.5 (EW=     12.3)
+           line MgII      113.8 ±    117.3 (EW=     20.2)
+       line NeV-3346      177.0 ±    109.2 (EW=     42.3)
+      line NeVI-3426       26.9 ±    104.6 (EW=      6.7)
+            line OII     1383.7 ±    111.1 (EW=    384.7)
+       line HeI-3889      475.2 ±     93.9 (EW=    137.5)
+     line NeIII-3968      153.0 ±     92.0 (EW=     45.1)
+             line Hd      302.3 ±     95.0 (EW=     92.7)
+             line Hg      390.1 ±     76.3 (EW=    131.5)
+             line Hb      845.1 ±     73.6 (EW=    357.2)
+           line OIII     6730.0 ±    149.0 (EW=   3048.0)
+       line HeI-5877       49.4 ±     39.7 (EW=     28.7)
+        line OI-6302      128.3 ±     40.6 (EW=     95.3)
+         line Ha+NII     2797.5 ±     75.9 (EW=   2183.9)
+            line SII      277.9 ±     34.0 (EW=    217.1)
+       line HeI-7065       39.3 ±     27.2 (EW=     32.7)
+     line ArIII-7138       31.6 ±     25.7 (EW=     26.4)
+       line OII-7325       53.6 ±     24.0 (EW=     43.6)
+     line ArIII-7753       51.1 ±     23.6 (EW=     48.7)
+       line HeI-8446       45.3 ±     22.0 (EW=     47.9)
+           line Pa10       17.4 ±     20.6 (EW=     19.1)
+      line SIII-9068      145.2 ±     22.1 (EW=    164.4)
+            line Pa9       38.5 ±     17.3 (EW=     50.3)
+      line SIII-9531      465.1 ±     42.1 (EW=    498.1)
+            line Pa8      -58.1 ±     34.2 (EW=    -62.2)
+            line PaD       40.0 ±     20.9 (EW=     48.7)
+       line HeI-1083      427.9 ±     32.2 (EW=    531.1)
+            line PaG       92.0 ±     25.8 (EW=    117.5)
+

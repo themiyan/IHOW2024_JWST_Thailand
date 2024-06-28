@@ -104,7 +104,6 @@ steps:
     save_intermediate_results: false
     save_results: false
     scale: 1.2 0.7
-    scale_detection: false
     search_output_file: false
     skip: true
     snr: 5.0 4.0

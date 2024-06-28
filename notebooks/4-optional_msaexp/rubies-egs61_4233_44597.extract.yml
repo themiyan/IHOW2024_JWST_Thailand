@@ -1,0 +1,71 @@
+# Fri Jun 28 11:56:00 2024
+# /Users/wnanayakkara/Library/CloudStorage/Dropbox/workshops/Ihow_2024_thailand/IHOW2024_JWST_Thailand/notebooks/4-optional_msaexp
+cross_dispersion_mask_type: trace
+degree_kwargs: {}
+diffs: false
+do_gratings:
+- PRISM
+- G395H
+- G395M
+- G235M
+- G140M
+drizzle_kws:
+  dkws:
+    oversample: 16
+    pixfrac: 0.8
+  ny: 13
+  step: 1
+  wave_sample: 1.05
+  with_pathloss: true
+files: null
+fit_params_kwargs: null
+fit_type: 1
+fix_params: false
+get_background: false
+get_xobj: false
+include_full_pixtab:
+- PRISM
+initial_sigma: 7
+initial_theta: null
+input_fix_sigma: null
+join:
+- 0
+- 3
+- 5
+kwargs:
+  estimate_sky_kwargs:
+    df: 81
+    high_clip: 1.0
+    make_plot: true
+    mask_yslit:
+    - - -4.5
+      - 4.5
+    min_bar: 0.95
+  flag_profile_kwargs:
+    grow: 2
+    make_plot: true
+    nfilt: -32
+    require_multiple: true
+  min_bar: 0.35
+make_2d_plots: true
+mask_cross_dispersion: null
+nod_offset: null
+offset_degree: 0
+pad_border: 2
+path_to_files: ./
+plot_kws: {}
+position_key: y_index
+recenter_all: false
+reference_exposure: auto
+root: rubies-egs61
+sort_by_sn: false
+split_uncover: true
+stuck_threshold: 0.3
+target: '4233_44597'
+trace_from_yoffset: true
+trace_niter: 4
+trace_with_xpos: false
+trace_with_ypos: true
+undo_barshadow: 2
+undo_pathloss: true
+use_first_sky: false

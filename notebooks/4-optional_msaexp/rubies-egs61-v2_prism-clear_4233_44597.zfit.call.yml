@@ -1,0 +1,18 @@
+# Fri Jun 28 10:59:31 2024
+# /Users/wnanayakkara/Library/CloudStorage/Dropbox/workshops/Ihow_2024_thailand/IHOW2024_JWST_Thailand/notebooks/4-optional_msaexp
+Rline: null
+file: rubies-egs61-v2_prism-clear_4233_44597.spec.fits
+froot: rubies-egs61-v2_prism-clear_4233_44597
+is_prism: false
+kwargs:
+  scale_uncertainty_kwargs: {}
+nspline: null
+ranges: null
+scale_disp: 1.300000
+sys_err: 0.020000
+use_full_dispersion: false
+vel_width: 100
+z0:
+- 1
+- 6
+zstep: null

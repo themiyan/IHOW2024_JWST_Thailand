@@ -1,0 +1,101 @@
+# (2024-06-28 04:39:47.126)
+msaexp.NirspecPipeline: Initialize jw04233006001-03101-00004-nrs1
+msaexp.NirspecPipeline: jw04233006001_03101_00004_nrs1_rate.fits
+# (2024-06-28 04:39:47.757)
+msaexp.NirspecPipeline: Initialize jw04233006001-03101-00004-nrs1
+msaexp.NirspecPipeline: jw04233006001_03101_00004_nrs1_rate.fits
+# (2024-06-28 04:39:48.136)
+msaexp.utils.pad_msa_metafile: Trim source_id in jw04233006001_01_msa.fits to [44597, 46811]
+msaexp.utils.pad_msa_metafile: pad = 0
+# (2024-06-28 04:39:48.139)
+
+prep.mask_snowballs(**{'visit': {'product': 'jw04233006001-03101-00004-nrs1', 'files': ['jw04233006001_03101_00004_nrs1_rate.fits']}, 'snowball_erode': 8, 'snowball_dilate': 24, 'mask_bit': 1024, 'instruments': ['NIRSPEC'], 'max_fraction': 0.3, 'unset4': False, 'snowblind_kwargs': {'new_jump_flag': 1024, 'min_radius': 4, 'growth_factor': 1.5, 'unset_first': True}, 'kwargs': {}})
+
+Snowball mask: jw04233006001_03101_00004_nrs1_rate.fits  N=  0(f=0.00%)
+exposure_oneoverf_correction: jw04233006001_03101_00004_nrs1_rate.fits axis=0 deg_pix=256
+exposure_oneoverf_correction: jw04233006001_03101_00004_nrs1_rate.fits apply to file
+msaexp.preprocess : jw04233006001_03101_00004_nrs1_rate.fits  bias offset =   0.000
+msaexp.preprocess : jw04233006001_03101_00004_nrs1_rate.fits    rms scale =   2.26
+# (2024-06-28 04:39:51.975)
+msaexp.jwst.MSAFlagOpenStep: jw04233006001_03101_00004_nrs1_rate.fits
+# (2024-06-28 04:40:05.887)
+msaexp.jwst.Extract2dStep: jw04233006001_03101_00004_nrs1_rate.fits
+# (2024-06-28 04:40:06.985)
+msaexp.jwst.FlatFieldStep: jw04233006001_03101_00004_nrs1_rate.fits
+# (2024-06-28 04:40:09.004)
+msaexp.jwst.PathLossStep: jw04233006001_03101_00004_nrs1_rate.fits
+# (2024-06-28 04:40:09.522)
+msaexp.jwst.BarShadowStep: jw04233006001_03101_00004_nrs1_rate.fits
+# (2024-06-28 04:40:10.065)
+msaexp.jwst.PhotomStep: jw04233006001_03101_00004_nrs1_rate.fits
+# slit_index slitlet_id  source_name  source_ra  source_dec
+# jw04233006001-03101-00004-nrs1
+   0   142   4233_46811  214.947599 52.911122
+   1   186   4233_44597  214.974335 52.924614
+# (2024-06-28 04:40:10.534)
+msaexp.get_slit_traces: Run
+msaexp.get_slit_traces: Trace set at index 0 for 4233_46811
+msaexp.get_slit_traces: Trace set at index 0 for 4233_44597
+msaexp.save_slit_data: jw04233006001_03101_00004_nrs1_phot.142.4233_46811.fits 
+msaexp.save_slit_data: jw04233006001_03101_00004_nrs1_phot.186.4233_44597.fits 
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=1 plus=0
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=1 plus=0
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+get_jwst_dq_bits: DO_NOT_USE+MSA_FAILED_OPEN+HOT+DEAD+OPEN+ADJ_OPEN+SATURATED = 738200579
+flag_nircam_hot_pixels : hot=1 plus=0
+ 0 jw04233006001_03101_00002_nrs1_phot.186.4233_44597.fits (24, 431)  1 flagged hot pixels
+ 1 jw04233006001_03101_00003_nrs1_phot.186.4233_44597.fits (24, 431)  1 flagged hot pixels
+ 2 jw04233006001_03101_00004_nrs1_phot.186.4233_44597.fits (24, 431)  1 flagged hot pixels
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+ extra_slit_dq_flags: (msaexp_badpix_nrs1.yaml)  N=0
+   jw04233006001_03101_00002_nrs1_phot.186.4233_44597.fits source_type=None  undo PATHLOSS_UN
+   jw04233006001_03101_00003_nrs1_phot.186.4233_44597.fits source_type=None  undo PATHLOSS_UN
+   jw04233006001_03101_00004_nrs1_phot.186.4233_44597.fits source_type=None  undo PATHLOSS_UN
+ Recomputed offsets slit     : force [ 0.00,  5.07, -5.07] pix offsets
+ apply_spline_bar_correction :  (mode='wave')
+ get_global_sky              : jw04233006001_sky.csv to sky_arrays
+ get_normalization_correction: prism_slit_renormalize.yaml quadrant=4 xcen=291 ycen=50
+ flag_trace_outliers         : 3 pixels  / yslit = [-2, 2]
+ flag_percentile_outliers    : 0 pixels  / plevels [0.95, -4, -0.1] threshold=3.023 (dilate=True)
+ flag_percentile_outliers    : calculated 0.950000 0.997281 0.999932
+ multiple mask               : 0 pixels in >= 2 exposures
+   fit_all_traces, iter 0
+      80  sigma=2.00  [ 0.000]  5928.5
+      81  sigma=6.01  [ 0.040]  4157.3
+     Exposure group 2   dchi2 =   -1771.2
+
+      82  sigma=6.01  [ 0.040]  4624.9
+      83  sigma=6.01  [ 0.040]  4624.9
+     Exposure group 1   dchi2 =       0.0
+
+      84  sigma=6.01  [ 0.040]  4994.3
+      85  sigma=6.01  [ 0.040]  4994.3
+     Exposure group 3   dchi2 =       0.0
+
+slit_prf_fraction: mu = -0.10, sigma = 0.6 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.12, sigma = 0.6 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.14, sigma = 0.6 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+msaexp.drizzle.extract_from_hdul: Initial center =    0.00, sigma =   0.60
+msaexp.drizzle.extract_from_hdul: dchi2/dcenter = 25462.4
+msaexp.drizzle.extract_from_hdul: aperture extraction = (15, 1)
+msaexp.drizzle.extract_from_hdul:  Output center =   -0.00, sigma =   0.60
+ estimate_sky                : 13 outliers > 7  / N=3613 sky pixels 
+ flag_from_profile           : 6 ( 0.0%) pixels
+slit_prf_fraction: mu = -0.10, sigma = 0.6 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.12, sigma = 0.6 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+slit_prf_fraction: mu = -0.14, sigma = 0.6 pix
+slit_prf_fraction: mu = 0.00, sigma = 0.0 pix
+msaexp.drizzle.extract_from_hdul: Initial center =    0.00, sigma =   0.60
+msaexp.drizzle.extract_from_hdul: dchi2/dcenter = 33110.4
+msaexp.drizzle.extract_from_hdul: aperture extraction = (15, 1)
+msaexp.drizzle.extract_from_hdul:  Output center =   -0.00, sigma =   0.60

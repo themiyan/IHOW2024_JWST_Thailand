@@ -1,0 +1,40 @@
+# (2024-06-28 04:39:22.579)
+msaexp.NirspecPipeline: Initialize jw04233006001-03101-00003-nrs1
+msaexp.NirspecPipeline: jw04233006001_03101_00003_nrs1_rate.fits
+# (2024-06-28 04:39:23.142)
+msaexp.NirspecPipeline: Initialize jw04233006001-03101-00003-nrs1
+msaexp.NirspecPipeline: jw04233006001_03101_00003_nrs1_rate.fits
+# (2024-06-28 04:39:23.527)
+msaexp.utils.pad_msa_metafile: Trim source_id in jw04233006001_01_msa.fits to [44597, 46811]
+msaexp.utils.pad_msa_metafile: pad = 0
+# (2024-06-28 04:39:23.531)
+
+prep.mask_snowballs(**{'visit': {'product': 'jw04233006001-03101-00003-nrs1', 'files': ['jw04233006001_03101_00003_nrs1_rate.fits']}, 'snowball_erode': 8, 'snowball_dilate': 24, 'mask_bit': 1024, 'instruments': ['NIRSPEC'], 'max_fraction': 0.3, 'unset4': False, 'snowblind_kwargs': {'new_jump_flag': 1024, 'min_radius': 4, 'growth_factor': 1.5, 'unset_first': True}, 'kwargs': {}})
+
+Snowball mask: jw04233006001_03101_00003_nrs1_rate.fits  N=  0(f=0.00%)
+exposure_oneoverf_correction: jw04233006001_03101_00003_nrs1_rate.fits axis=0 deg_pix=256
+exposure_oneoverf_correction: jw04233006001_03101_00003_nrs1_rate.fits apply to file
+msaexp.preprocess : jw04233006001_03101_00003_nrs1_rate.fits  bias offset =   0.003
+msaexp.preprocess : jw04233006001_03101_00003_nrs1_rate.fits    rms scale =   2.25
+# (2024-06-28 04:39:27.578)
+msaexp.jwst.MSAFlagOpenStep: jw04233006001_03101_00003_nrs1_rate.fits
+# (2024-06-28 04:39:41.542)
+msaexp.jwst.Extract2dStep: jw04233006001_03101_00003_nrs1_rate.fits
+# (2024-06-28 04:39:42.604)
+msaexp.jwst.FlatFieldStep: jw04233006001_03101_00003_nrs1_rate.fits
+# (2024-06-28 04:39:44.475)
+msaexp.jwst.PathLossStep: jw04233006001_03101_00003_nrs1_rate.fits
+# (2024-06-28 04:39:44.923)
+msaexp.jwst.BarShadowStep: jw04233006001_03101_00003_nrs1_rate.fits
+# (2024-06-28 04:39:45.499)
+msaexp.jwst.PhotomStep: jw04233006001_03101_00003_nrs1_rate.fits
+# slit_index slitlet_id  source_name  source_ra  source_dec
+# jw04233006001-03101-00003-nrs1
+   0   142   4233_46811  214.947599 52.911122
+   1   186   4233_44597  214.974335 52.924614
+# (2024-06-28 04:39:45.930)
+msaexp.get_slit_traces: Run
+msaexp.get_slit_traces: Trace set at index 0 for 4233_46811
+msaexp.get_slit_traces: Trace set at index 0 for 4233_44597
+msaexp.save_slit_data: jw04233006001_03101_00003_nrs1_phot.142.4233_46811.fits 
+msaexp.save_slit_data: jw04233006001_03101_00003_nrs1_phot.186.4233_44597.fits 

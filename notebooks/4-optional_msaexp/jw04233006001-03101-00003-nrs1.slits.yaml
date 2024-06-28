@@ -1,0 +1,28 @@
+'4233_44597':
+  bkg_index: []
+  is_background: false
+  prof_sigma: 0.7659574468085106
+  redshift: null
+  skip: []
+  slit_dec: 52.92464461551973
+  slit_index: 1
+  slit_ra: 214.97435798405368
+  source_dec: 52.92461350726
+  source_name: '4233_44597'
+  source_ra: 214.97433534766
+  src_index: 0
+  yoffset: 0
+'4233_46811':
+  bkg_index: []
+  is_background: false
+  prof_sigma: 0.7659574468085106
+  redshift: null
+  skip: []
+  slit_dec: 52.91115297318115
+  slit_index: 0
+  slit_ra: 214.94761605685736
+  source_dec: 52.9111222893
+  source_name: '4233_46811'
+  source_ra: 214.94759947946
+  src_index: 0
+  yoffset: 0
